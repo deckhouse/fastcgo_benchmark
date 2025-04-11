@@ -1,6 +1,6 @@
 module golang.conf
 
-go 1.23.2
+go 1.24.2
 
 require (
 	github.com/aclements/go-moremath v0.0.0-20210112150236-f10218a38794 // indirect

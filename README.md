@@ -5,7 +5,7 @@ FastCGo (ARM64) implementation
 We run benchmarks on
 
 - Server: Ampere Altra Neoverse-N1 @ 2GHz ARM64, Ubuntu 24.04.1
-- Go: 1.23.2 linux/arm64
+- Go: 1.24.2 linux/arm64
 
 # Run benchmark
 
