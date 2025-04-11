@@ -17,6 +17,7 @@ We run benchmarks on
 |:-----------------------------|:------------|
 | CGoEmptyFunction             | 71.08n ± 1% |
 | CGoFunction                  | 78.65n ± 1% |
+| CGoNoCallbackFunction        | 82.80n ± 1% |
 | GoEmptyFunction              | 1.798n ± 1% |
 | GoFunction                   | 1.813n ± 1% |
 | FastCGoEmptyFunction         | 2.161n ± 1% |

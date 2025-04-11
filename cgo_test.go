@@ -16,6 +16,12 @@ func BenchmarkCGoFunctionCall(b *testing.B) {
 	}
 }
 
+func BenchmarkCGoNoCallbackFunctionCall(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		CGoNoCallbackFunctionCall()
+	}
+}
+
 func BenchmarkGoEmptyFunctionCall(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		GoEmptyFunctionCall()

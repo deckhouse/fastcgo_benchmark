@@ -1,9 +1,19 @@
 package cgo
 
+import "C"
+import (
+	"golang.conf/fastcgo"
+	"unsafe"
+)
+
 /*
 void empty_function() {}
 
 int function(int a) {
+  return a;
+}
+
+int nocallback_function(int a) {
   return a;
 }
 
@@ -18,12 +28,8 @@ void fastcgo_function(void *args, void *result) {
   ((struct Result*)result)->value = ((struct Arguments*)args)->a;
 }
 */
+// #cgo nocallback nocallback_function
 import "C"
-
-import (
-	"golang.conf/fastcgo"
-	"unsafe"
-)
 
 func CGoEmptyFunctionCall() {
 	C.empty_function()
@@ -31,6 +37,10 @@ func CGoEmptyFunctionCall() {
 
 func CGoFunctionCall() {
 	C.function(5)
+}
+
+func CGoNoCallbackFunctionCall() {
+	C.nocallback_function(5)
 }
 
 func FastCGoEmptyFunctionCall() {
